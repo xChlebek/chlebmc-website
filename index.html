@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ChlebMC.PL</title> <!-- Change to your server name -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="main.js" type="text/javascript"></script>
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <ul id="nawigacja">
+      <li><a href="index.html" class="przycisk">Main page</a></li>
+      <li><a href="https://sklep.chlebmc.pl" class="przycisk">Shop</a></li> <!-- Change to your link to itemshop -->
+      <li><a href="https://discord.gg/qDXXJNEZYS" class="przycisk">Discord</a></li> <!-- Change to your link to discord server -->
+    </ul>
+    <div id="kontener">
+<script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <div class="server-status">
+      Server status: <span class="server-online"></span>
+    </div>
+    <script>
+      MinecraftAPI.getServerStatus('chlebmc.pl', { // Change chlebmc.pl to your server name
+        port: 25565 // optional, only if you need a custom port
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Server status: Offline';
+        }
+
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? 'Online' : 'Offline';
+      });
+    </script>
+	<div class="hero" id="main">
+			<p class="info">Join to <span class="sip" data-ip="chlebmc.pl" data-port="25565"> <!-- Change ChlebMC.PL to your server name and 25565 to your server port -->
+			0</span> players on <span class="ip">ChlebMC.pl</span></p> <!-- Change ChlebMC.PL to your server name -->
+		</div>
+    </div>
+    <!-- <footer>
+      <p>Copyright &copy; xChlebek 2021</p>
+    </footer> -->
+  </body>
+  </html>
