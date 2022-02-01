@@ -23,25 +23,11 @@
       <li><a href="https://discord.gg/qDXXJNEZYS" class="przycisk">Discord</a></li>
     </ul>
     <div id="kontener">
-<script src="https://mcapi.us/scripts/minecraft.js"></script>
-    <div class="server-status">
-      Status serwera: <span class="server-online"></span>
-    </div>
-    <script>
-      MinecraftAPI.getServerStatus('chlebmc.pl', {
-        port: 25565
-      }, function (err, status) {
-        if (err) {
-          return document.querySelector('.server-status').innerHTML = 'Status serwera: Offline';
-        }
-
-        document.querySelector('.server-online').innerHTML = status.online ? 'Online' : 'Offline';
-      });
-    </script>
-	<div class="hero" id="main">
-			<p class="info">Dołącz do <span class="sip" data-ip="chlebmc.pl" data-port="25565">
-			0</span> graczy na <span class="ip">ChlebMC.pl</span></p>
-		</div>
+      <h1>Witaj na ChlebMC.PL</h1>
+	    <div class="hero" id="main">
+			  <p class="info">Dołącz do <span class="sip" data-ip="chlebmc.pl" data-port="25565">
+			  0</span> graczy na <span class="ip">ChlebMC.pl</span></p>
+		  </div>
     </div>
     <footer>
       <p>Copyright &copy; xChlebek 2022</p>
